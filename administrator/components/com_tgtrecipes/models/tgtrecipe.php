@@ -5,7 +5,7 @@ class TgtrecipesModelTgtrecipe extends JModelAdmin
 {
 	protected $text_prefix = 'COM_TGTRECIPES';
 
-	public function getTable($type = 'Tgtrecipe', $prefix = 'tgtrecipesTable', $config = array())
+	public function getTable($type = 'Tgtrecipe', $prefix = 'TgtrecipesTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
