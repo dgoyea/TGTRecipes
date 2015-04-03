@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>COM_BUGS</name>
+	<author>David Goyea</author>
+	<creationDate>March 2015</creationDate>
+	<copyright>Copyright 2015 WELP LLC. All rights reserved.	</copyright>
+	<license>GNU General Public License version 2 or later.</license>
+	<authorEmail>dgoyea@yahoo.com</authorEmail>
+	<authorUrl>www.tailgateterritory.com</authorUrl>
+	<version>1.0</version>
+	<description>COM_BUGS_XML_DESCRIPTION</description>
+	<administration>
+		<files>
+			<filename>index.html</filename>
+			<filename>bugs.php</filename>
+		</files>
+		<menu>COM_BUGS</menu>
+	</administration>
+</extension>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+		<field name="importfile"
+			type="gcbuploadfile"
+			id="formfile"
+			size="81"
+			class="inputbox"
+			description="COM_GARYSCOOKBOOK_FIELD_SELECT_MEALMASTER_FILE_DESC"
+			label="COM_GARYSCOOKBOOK_FIELD_SELECT_MEALMASTER_FILE_LABEL"
+			filter="string"
+			required="true"
+		/>
+		<field name="import_category"
+			type="category"
+			id="formfile_cat"
+			extension="com_garyscookbook"
+			label="COM_GARYSCOOKBOOK_FIELD_MM_CATEGORY_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_MM_CATEGORY_DESC"
+			class="inputbox"
+			required="true"
+			published="1"
+			default="">
+			action="true"
+			<option value="">COM_GARYSCOOKBOOK_FIELD_CATEGORY_OPTION</option>
+		</field>
+</form>

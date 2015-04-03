@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Community - Members Module</name>
+	<author>JomSocial Team</author>
+	<creationDate>April 2013</creationDate>
+	<copyright>Copyright (C) 2008 - 2013 JomSocial. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>3.2.1.5</version>
+	<description>Latest Members</description>
+
+	<files>
+		<filename module="mod_community_members">mod_community_members.php</filename>
+		<filename>mod_community_members.xml</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default=" cModule cFrontPage-LatestMembers app-box" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+				<field name="default" type="text" default="5" label="Default members value" description="Default members value" />
+				<field name="list_filters" type="list" multiple="true"  description="Pick the  sorting filters you want" label="Enable list sorting filters" >
+			        <option value="newest">Newest</option>
+			        <option value="featured">Featured</option>
+			        <option value="active">Active</option>
+			        <option value="popular">Popular</option>
+				</field>
+				<field name="default_filter" type="list"  default="newest" description="Default active filter, make sure you pick the activated filter" label="Default active filter" >
+			        <option value="newest">Newest</option>
+			        <option value="featured">Featured</option>
+			        <option value="active">Active</option>
+			        <option value="popular">Popular</option>
+				</field>
+				<field name="show_total_members" type="list" default="1" label="Show total members" description="Show / hide the total members">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+            	</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,18 @@
+{
+    "core": {
+        "css": [
+            "_release/css/bundle",
+            "autocomplete"
+        ],
+        "js": [
+        ]
+    },
+    "views": {
+        "frontpage": {
+            "css": [
+                "",
+                ""
+            ]
+        }
+    }
+}

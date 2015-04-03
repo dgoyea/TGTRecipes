@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details-1"
+			addfieldpath= "/administrator/components/com_garyscookbook/models/fields" >
+		<field name="langfrom"
+			type="gcblanguage"
+			client="site"
+			default=""
+			required="true"
+			label="COM_GARYSCOOKBOOK_FIELD_LANGFROM_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_LANGFROM_DESC">
+			<option value="">JOPTION_SELECT_LANGUAGE</option>
+		</field>
+		<field name="langto"
+			type="gcblanguage"
+			client="site"
+			default=""
+			required="true"
+			label="COM_GARYSCOOKBOOK_FIELD_LANGTO_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_LANGTO_DESC">
+			<option value="">JOPTION_SELECT_LANGUAGE</option>
+		</field>
+		<field name="override"
+			type="checkbox"
+			value="false"
+			filter="boolean"
+			label="COM_GARYSCOOKBOOK_FIELD_LANGOVERRIDE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_LANGOVERRIDE_DESC"/>
+
+	</fieldset>
+</form>

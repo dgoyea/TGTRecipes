@@ -1,0 +1,21 @@
+.cMod-Notify > a {
+	padding-left: 5px;
+	padding-right: 5px;
+	position: relative;
+}
+
+.notifcount {
+	background-color: #3498db;
+	color: white;
+	font-size: 10px;
+	line-height: 14px;
+	padding: 0px 4px;
+	position: absolute;
+		top: 0;
+		right: -1px;
+	text-align: center;
+	text-indent: 0;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	        border-radius: 2px;
+}

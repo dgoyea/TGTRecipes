@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id: default.xml 21748 2011-07-06 09:16:33Z chdemko $ -->
+<metadata>
+	<layout title="COM_GARYSCOOKBOOK_CATEGORY_VIEW_DEFAULT_TITLE" option="COM_GARYSCOOKBOOK_CATEGORY_VIEW_DEFAULT_OPTION">
+		<help
+			key = "JHELP_MENUS_MENU_ITEM_CONTACT_CATEGORY"
+		/>
+		<message>
+			<![CDATA[COM_GARYSCOOKBOOK_CATEGORY_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_garyscookbook/models/fields"
+		>
+
+			<field name="id" type="category"
+				description="COM_GARYSCOOKBOOK_FIELD_CATEGORY_DESC"
+				extension="com_garyscookbook"
+				label="COM_GARYSCOOKBOOK_FIELD_CATEGORY_LABEL"
+				required="true"
+			/>
+		</fieldset>
+	</fields>
+
+
+<fields name="params">
+<fieldset name="recipe"
+		label="COM_GARYSCOOKBOOK_FIELD_CONFIG_INDIVIDUAL_RECIPE_DISPLAY"
+	>
+		<field
+			name="recipe_layout" type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="JGLOBAL_FIELD_LAYOUT_DESC"
+			menuitems="true"
+			extension="com_garyscookbook"
+			view="recipe"
+		/>
+
+		<field name="show_recipe_category"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_CATEGORY_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_CATEGORY_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="hide">JHIDE</option>
+			<option value="show_no_link">COM_GARYSCOOKBOOK_FIELD_VALUE_NO_LINK
+			</option>
+			<option value="show_with_link">COM_GARYSCOOKBOOK_FIELD_VALUE_WITH_LINK
+			</option>
+		</field>
+
+		<field name="show_garyscookbook_list"
+			type="list"
+			description="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_RECIPELIST_DESC"
+				label="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_RECIPELIST_LABEL"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="show_recipe_offline"
+			type="list"
+			description="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_OFFLINE_DESC"
+				label="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_OFFLINE_LABEL"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="show_recipe_offline_art"
+			type="text"
+			default=""
+			description="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_OFFLINE_TEXT_DESC"
+				label="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_OFFLINE_TEXT_LABEL"
+		/>
+
+		<field name="presentation_style"
+			type="list"
+				description="COM_GARYSCOOKBOOK_FIELD_PRESENTATION_DESC"
+				label="COM_GARYSCOOKBOOK_FIELD_PRESENTATION_LABEL"
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="sliders">COM_GARYSCOOKBOOK_FIELD_VALUE_SLIDERS</option>
+				<option value="tabs">COM_GARYSCOOKBOOK_FIELD_VALUE_TABS</option>
+				<option value="plain">COM_GARYSCOOKBOOK_FIELD_VALUE_PLAIN</option>
+		</field>
+		<field name="cookbook_mail"
+			type="text"
+			size="30"
+			label="COM_GARYSCOOKBOOK_FIELD_CONFIG_MAIL_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_CONFIG_MAIL_DESC"
+			default="mail@mail.de"
+		/>
+
+		<field name="recipe_per_site"
+			type="integer"
+			default="9"
+			label="COM_GARYSCOOKBOOK_FIELD_PERPAGE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PERPAGE_DESC"
+			first="1"
+			last="100"
+			step="1" />
+
+		<field name="recipe_toplist"
+			type="integer"
+			default="10"
+			label="COM_GARYSCOOKBOOK_FIELD_TOPLIST_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_TOPLIST_DESC"
+			first="5"
+			last="20"
+			step="1" />
+
+		<field name="show_recipe_fp_allow"
+			type="list"
+			description="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_FPEDIT_DESC"
+			label="COM_GARYSCOOKBOOK_FIELD_RECIPE_SHOW_FPEDIT_LABEL"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+
+		<field name="fp_access"
+			id="fp_access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			class="inputbox"
+			size="1" />
+	</fieldset>
+	<fieldset name="Category"
+			label="JCATEGORY"
+
+	>
+
+		<field
+			name="category_layout" type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="JGLOBAL_FIELD_LAYOUT_DESC"
+			menuitems="true"
+			extension="com_garyscookbook"
+			view="category"
+		/>
+
+			<field name="show_category_title" type="list"
+				label="JGLOBAL_SHOW_CATEGORY_TITLE"
+				description="JGLOBAL_SHOW_CATEGORY_TITLE_DESC"
+				>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_description" type="list"
+				description="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_DESC"
+				label="JGLOBAL_SHOW_CATEGORY_DESCRIPTION_LABEL"
+			>
+
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_description_image" type="list"
+				description="JGLOBAL_SHOW_CATEGORY_IMAGE_DESC"
+				label="JGLOBAL_SHOW_CATEGORY_IMAGE_LABEL"
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="maxLevel" type="list"
+				default="-1"
+				description="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_DESC"
+				label="JGLOBAL_MAXIMUM_CATEGORY_LEVELS_LABEL"
+			>
+				<option value="-1">JALL</option>
+				<option value="0">JNONE</option>
+				<option value="1">J1</option>
+				<option value="2">J2</option>
+				<option value="3">J3</option>
+				<option value="4">J4</option>
+				<option value="5">J5</option>
+			</field>
+
+			<field name="show_empty_categories" type="list"
+				label="JGLOBAL_SHOW_EMPTY_CATEGORIES_LABEL"
+				description="COM_GARYSCOOKBOOK_SHOW_EMPTY_CATEGORIES_DESC"
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+
+			<field name="show_subcat_desc" type="list"
+				label="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_LABEL"
+				description="JGLOBAL_SHOW_SUBCATEGORIES_DESCRIPTION_DESC"
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_cat_items" type="list"
+				label="COM_GARYSCOOKBOOK_FIELD_SHOW_CAT_ITEMS_LABEL"
+				description="COM_GARYSCOOKBOOK_FIELD_SHOW_CAT_ITEMS_DESC"
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="recipe_col_width"
+				type="integer"
+				default="220"
+				label="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_COL_WIDTH_LABEL"
+				description="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_COL_WIDTH_DESC"
+				first="150"
+				last="400"
+				step="5" />
+
+			<field name="cat_rec_desc_length"
+				type="integer"
+				default="25"
+				label="COM_GARYSCOOKBOOK_FIELD_PARAMS_REC_DESC_LENGTH_LABEL"
+				description="COM_GARYSCOOKBOOK_FIELD_PARAMS_REC_DESC_LENGTH_DESC"
+				first="5"
+				last="100"
+				step="5" />
+	</fieldset>
+
+
+<fieldset name="advanced" label="JGLOBAL_LIST_LAYOUT_OPTIONS">
+
+			<field name="spacer2" type="spacer" class="text"
+					label="JGLOBAL_SUBSLIDER_DRILL_CATEGORIES_LABEL"
+			/>
+
+
+			<field name="show_pagination_limit" type="list"
+				description="JGLOBAL_DISPLAY_SELECT_DESC"
+				label="JGLOBAL_DISPLAY_SELECT_LABEL"
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option><option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="show_pagination" type="list"
+				description="JGLOBAL_PAGINATION_DESC"
+				label="JGLOBAL_PAGINATION_LABEL"
+			>
+
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">JGLOBAL_AUTO</option>
+			</field>
+
+			<field
+				name="show_pagination_results"
+				type="list"
+				label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+				description="JGLOBAL_PAGINATION_RESULTS_DESC">
+
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+
+			</field>
+
+</fieldset>
+	<fieldset name="Pictures"
+		 label="COM_GARYSCOOKBOOK_IMAGE_SETTINGS"
+		 >
+		<field name="show_logo"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_SHOWLOGO_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_SHOWLOGO_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_imgfilename"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMGFILENAME_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMGFILENAME_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_expic"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_EXPIC_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_EXPIC_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_lightbox"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_LIGHTBOX_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_LIGHTBOX_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+
+
+<fieldset name="Icons"
+			 label="COM_GARYSCOOKBOOK_ICON_SETTINGS"
+			 >
+		<field name="show_icons"
+			type="list"
+			label="JGLOBAL_SHOW_ICONS_LABEL"
+			description="JGLOBAL_SHOW_ICONS_DESC"
+			>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="3">JGLOBAL_SHOW_ICONS_LABEL</option>
+		</field>
+
+		<field name="show_print_icon"
+			type="list"
+			label="JGLOBAL_SHOW_PRINT_ICON_LABEL"
+			description="JGLOBAL_SHOW_PRINT_ICON_DESC"
+			>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option	value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_email_icon"
+			type="list"
+			label="JGLOBAL_SHOW_EMAIL_ICON_LABEL"
+			description="JGLOBAL_SHOW_EMAIL_ICON_DESC"
+			>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_facebook_icon"
+			type="list"
+			label="COM_GARYSCOOKBOOK_SHOW_FACEBOOK_ICON_LABEL"
+			description="COM_GARYSCOOKBOOK_SHOW_FACEBOOK_ICON_DESC"
+			>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_favorit_icon"
+			type="list"
+			label="COM_GARYSCOOKBOOK_SHOW_FAVORIT_ICON_LABEL"
+			description="COM_GARYSCOOKBOOK_SHOW_FAVORIT_ICON_DESC"
+			>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_export_icon"
+			type="list"
+			label="COM_GARYSCOOKBOOK_SHOW_EXPORT_ICON_LABEL"
+			description="COM_GARYSCOOKBOOK_SHOW_EXPORT_ICON_DESC"
+			>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_edit_icon"
+			type="list"
+			label="COM_GARYSCOOKBOOK_SHOW_EDIT_ICON_LABEL"
+			description="COM_GARYSCOOKBOOK_SHOW_EDIT_ICON_DESC"
+			>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+	</fieldset>
+
+<fieldset name="Fields"
+			 label="COM_GARYSCOOKBOOK_INFORMATION_SETTINGS"
+			 >
+
+		<field name="show_imgtitle"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMGTITLE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMGTITLE_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_imgvotes"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_IMGVOTES_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_IMGVOTES_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_imgauthor"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_IMGAUTHOR_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_IMGAUTHOR_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_created_by_alias"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_CREATEDBYALIAS_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_CREATEDBYALIAS_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_imgtext"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_IMGTEXT_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_RECIPE_IMGTEXT_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_details"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_DETAILS_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_DETAILS_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_price"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_PRICE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_PRICE_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_country"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_COUNTRY_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_COUNTRY_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_portion"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_PORTION_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_PORTION_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_aging"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_AGING_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_AGING_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_years"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_YEARS_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_YEARS_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_grapes"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_GRAPES_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_GRAPES_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_ingredients"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_INGREDIENTS_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_INGREDIENTS_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_properties"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_SHOW_PROPERTIES_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_SHOW_PROPERTIES_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="show_notes"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_NOTES_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_NOTES_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="show_doc"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_DOC_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_DOC_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_vegan"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_VEGAN_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_VEGAN_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_laktose"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_LAKTOSE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_LAKTOSE_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_diaet"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_DIAET_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_DIAET_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_gluten"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_GLUTEN_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_GLUTEN_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_amount"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_AMOUNT_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_AMOUNT_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_kcal"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_KCAL_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_KCAL_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_kjoule"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_KJOULE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_KJOULE_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_fat"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_FAT_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_FAT_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_breadunit"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_BREADUNIT_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_BREADUNIT_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_protein"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_PROTEIN_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_PROTEIN_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_carbohydrates"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_CARBOHYDRATES_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_CARBOHYDRATES_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_modified"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_NEWDATE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_NEWDATE_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="show_imgcounter"
+			type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMGCOUNTER_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMGCOUNTER_DESC"
+		>
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+
+
+	</fieldset>
+		<fieldset name="integration"
+		>
+
+			<field name="show_feed_link" type="list"
+				description="JGLOBAL_SHOW_FEED_LINK_DESC"
+				label="JGLOBAL_SHOW_FEED_LINK_LABEL"
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+		</fieldset>
+</fields>
+</metadata>

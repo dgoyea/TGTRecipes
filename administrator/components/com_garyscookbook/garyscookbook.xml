@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>com_garyscookbook</name>
+	<author>Gerald Berger</author>
+	<creationDate>Feb 2015</creationDate>
+	<copyright>(C) 2005 - 2015 Web and EDV Service Gerald Berger. All rights reserved.
+	</copyright>
+	<license>GNU General Public License version 2 or later; see
+		LICENSE.txt</license>
+	<authorEmail>info@vb-dozent.net</authorEmail>
+	<authorUrl>www.vb-dozent.net</authorUrl>
+	<version>4.5.2</version>
+	<description>COM_GARYSCOOKBOOK_XML_DESCRIPTION</description>
+
+	<scriptfile>script.php</scriptfile>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+
+	<files folder="site">
+		<filename>garyscookbook.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>metadata.xml</filename>
+		<filename>router.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>garyscookbook</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>themes</folder>
+		<folder>views</folder>
+	</files>
+	<images destination="com_garyscookbook">
+		<folder>garyscookbook</folder>
+	</images>
+
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_garyscookbook.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.com_garyscookbook.ini</language>
+		<language tag="da-DK">language/da-DK/da-DK.com_garyscookbook.ini</language>
+	</languages>
+
+	<administration>
+		<menu img="components/com_garyscookbook/assets/images/icon-16-gcb-menu.png">com_garyscookbook</menu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>garyscookbook.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>elements</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_garyscookbook.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_garyscookbook.sys.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_garyscookbook.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.com_garyscookbook.sys.ini</language>
+			<language tag="da-DK">language/da-DK/da-DK.com_garyscookbook.ini</language>
+			<language tag="da-DK">language/da-DK/da-DK.com_garyscookbook.sys.ini</language>
+
+		</languages>
+	</administration>
+	<!-- UPDATESERVER DEFINITION -->
+	<updateservers>
+		<!-- Note: No spaces or linebreaks allowed between the server tags -->
+		<server type="extension" priority="1" name="Garys Cookbook Updatesite">http://www.garyscookbook.de/update/garyscookbook.xml</server>
+	</updateservers>
+
+</extension>
+

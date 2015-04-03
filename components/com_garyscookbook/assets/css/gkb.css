@@ -1,0 +1,28 @@
+﻿/**
+ * @package		Garyscookbook.Site
+ * @subpackage	com_garyscookbook
+ * @copyright	Copyright (C) 2005 - 2012 Web and Edv Service Gerald Berger, Ove Eriksson, Jens Straube. All rights reserved.
+ * @license		GNU General Public License version 2 or later;
+ *
+ */
+
+.icon-32-publishws {
+	background: url(../images/icon-32-publishws.png);
+}
+.icon-32-unpublishws {
+	background: url(../images/icon-32-unpublishws.png);
+}
+.icon-32-extension {
+	background: url(../images/icon-32-extension.png);
+}
+#attributeX_table_0{
+	margin-top: 5px;
+}
+#attributeX_table_0 td {
+	padding: 1px 1px 1px 5px;
+}
+#attributeX_table_0 label {
+	text-align: right;
+	min-width: 80px;
+}
+

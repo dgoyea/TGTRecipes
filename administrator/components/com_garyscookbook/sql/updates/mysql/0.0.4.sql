@@ -1,0 +1,1 @@
+ALTER TABLE `#__garyscookbook` CHANGE `imgfilename` `imgfilename` VARCHAR(200) NULL DEFAULT NULL;

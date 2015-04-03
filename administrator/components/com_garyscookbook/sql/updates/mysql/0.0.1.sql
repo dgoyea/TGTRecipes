@@ -1,0 +1,17 @@
+UPDATE `#__garyscookbook` SET `created`= FROM_UNIXTIME(`imgdate`);
+ALTER TABLE `#__garyscookbook` DROP `imgdate`;
+ALTER TABLE `#__garyscookbook` ADD `created` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' AFTER `imgtext`;
+ALTER TABLE `#__garyscookbook` ADD `featured` TINYINT(3) NOT NULL DEFAULT '0';
+ALTER TABLE `#__garyscookbook` ADD `language` CHAR(7)NOT NULL DEFAULT '*';
+ALTER TABLE `#__garyscookbook` ADD `publish_up` DATETIME NOT NULL DEFAULT'0000-00-00 00:00:00', ADD`publish_down` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00';
+ALTER TABLE `#__garyscookbook` ADD `params` TEXT NOT NULL AFTER `ordering`;
+ALTER TABLE `#__garyscookbook` ADD `default_con` TINYINT(1) NOT NULL AFTER `published`;
+ALTER TABLE `#__garyscookbook` ADD `modified` DATETIME NOT NULL AFTER `created_by`;
+ALTER TABLE `#__garyscookbook` ADD `modified_by` INT(10) NOT NULL AFTER `modified`;
+ALTER TABLE `#__garyscookbook` CHANGE `expic1` `expic1` VARCHAR(200) NULL DEFAULT NULL;
+ALTER TABLE `#__garyscookbook` CHANGE `expic2` `expic2` VARCHAR(200) NULL DEFAULT NULL;
+ALTER TABLE `#__garyscookbook` CHANGE `expic3` `expic3` VARCHAR(200) NULL DEFAULT NULL;
+ALTER TABLE `#__garyscookbook` CHANGE `expic4` `expic4` VARCHAR(200) DEFAULT NULL;
+ALTER TABLE `#__garyscookbook` ADD `created_by_alias` VARCHAR(255) NOT NULL AFTER`created_by`;
+UPDATE `#__garyscookbook`SET`access`='1';
+ALTER TABLE `#__garyscookbook` ADD `used_ips` VARCHAR(15) NOT NULL AFTER `imgvotesum`;

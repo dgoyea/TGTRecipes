@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+		<field name="uploadedFile"
+			type="gcbuploadfile"
+			id="uploadedFile"
+			size="81"
+			class="inputbox"
+			description="COM_GARYSCOOKBOOK_FIELD_SELECT_FILE_ONE_RECIPE_DESC"
+			label="COM_GARYSCOOKBOOK_FIELD_SELECT_ONE_RECIPE_LABEL"
+			filter="string"
+			required="true"
+		/>
+		<field name="import_category"
+			type="category"
+			id="import_category"
+			extension="com_garyscookbook"
+			label="COM_GARYSCOOKBOOK_FIELD_ONE_RECIPE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_ONE_RECIPE_DESC"
+			class="inputbox"
+			required="true"
+			published="1"
+			default="">
+			action="true"
+			<option value="">COM_GARYSCOOKBOOK_FIELD_CATEGORY_OPTION</option>
+		</field>
+</form>

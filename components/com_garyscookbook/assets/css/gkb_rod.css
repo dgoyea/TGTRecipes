@@ -1,0 +1,24 @@
+﻿/**
+ * @package		Garyscookbook.Site
+ * @subpackage	com_garyscookbook
+ * @copyright	Copyright (C) 2005 - 2012 Web and Edv Service Gerald Berger, Ove Eriksson, Jens Straube. All rights reserved.
+ * @license		GNU General Public License version 2 or later;
+ *
+ */
+
+/*Recipe of Day CSS*/
+#rodcontainer {
+	width: 480px;
+	
+}
+.TextArea1{
+	width: 480px; 
+	height: 100px;
+}
+.picunder{
+	font-size: xx-small; 
+	text-align: left;
+}
+.rodtext{
+	
+}

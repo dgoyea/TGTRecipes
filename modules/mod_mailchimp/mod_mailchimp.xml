@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension	type="module" 	version="1.6.0" client="site" method="upgrade">
+	
+	<name>Mail Chimp Subscriber</name>
+	<author>Pankaj Raj</author>
+	<creationDate>june/2011</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>rajrajpankaj.89@gmail.com</authorEmail>
+	<authorUrl>http://cyphertextsolutions.com</authorUrl>
+	<version>1.1</version>
+	<description>This module adds a subscription block on you website from this block user can subscribe to email subscription and subscriber will be added to mail chimp list.</description>
+	<files>
+		<filename module="mod_mailchimp">mod_mailchimp.php</filename>		
+		<filename>index.html</filename>
+		<folder>lib</folder>
+	</files>
+	
+	<languages>
+		<language tag="it-IT">language/it-IT/it-IT.mod_mailchimp.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_mailchimp.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="apikey" 
+					type="text" 
+					default="" 
+					label="API KEY" 
+					description="Please enter the api key provided by mail chimp"/>
+				
+				
+				<field name="listid" 
+					type="text" 
+					default="" 
+					label="LIST ID" 
+					description="Please provide the subscriber list id to which you wants to add"/>
+			
+				<field name="mergevars" 
+					type="text" 
+					default="FNAME,LNAME" 
+					label="MERGE VARS" 
+					description="Provide merge vars in comma separation e.g FNAME,LNAME"/>
+			
+				<field name="mergevarslabels" 
+					type="text" 
+					default="FIRST NAME,LAST NAME" 
+					label="MERGE VARS" 
+					description="Provide merge vars labels in comma separation e.g FNAME,LNAME"/>
+			
+				
+				<field name="welcome_mail" type="list" default="false" label="Enable welcome mail" description="Enable welcome email">
+					<option value="true">True</option>
+					<option value="false">False</option>
+				</field>
+								
+				<field name="moduleclass_sfx" 
+					type="text" 					 
+					label="Module Class Suffix" 
+					description="Module Class Suffix" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

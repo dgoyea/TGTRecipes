@@ -1,0 +1,14 @@
+<div class="joms-postbox-dropdown mood-dropdown">
+  <ul class="joms-postbox-emoticon unstyled clearfix">
+    <% if ( data && data.items && data.items.length ) for ( var i = 0; i < data.items.length; i++ ) { %>
+    <li data-mood="<%= data.items[i][0] %>">
+      <% if ( typeof data.items[i][2] !== 'undefined') { %>
+      <div><img class="joms-emoticon" src="<%= data.items[i][2] %>"><span><%= data.items[i][1] %></span></div>
+      <% } else { %>
+      <div><i class="joms-emoticon joms-emo-<%= data.items[i][0] %>"></i><span><%= data.items[i][1] %></span></div>
+      <% } %>
+    </li>
+    <% } %>
+    <li class="joms-remove-button"><%= data.language.status.remove_mood_button %></li>
+  </ul>
+</div>

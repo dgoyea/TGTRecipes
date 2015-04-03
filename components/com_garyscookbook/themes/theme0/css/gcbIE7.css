@@ -1,0 +1,18 @@
+﻿/**
+ * @package Gary's Cookbook
+ * @author Gerald Berger
+ * @copyright (C) 2012 Gerald Berger
+ * @license GNU/GPL, see LICENSE.php / COPYRIGHT.php for copyright notices and details.
+ */
+.catbox { /* Inline-Block-Simulation */
+	display: inline;
+	zoom: 1;
+}
+.recipebox { /* Inline-Block-Simulation */
+	display: inline;
+	zoom: 1;
+}
+.detailbox { /* Inline-Block-Simulation */
+	display: inline;
+	zoom: 1;
+}

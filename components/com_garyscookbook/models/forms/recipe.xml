@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="garyscookbook" addrulepath="components/com_garyscookbook/models/rules" label="COM_GARYSCOOKBOOK_FORM_LABEL">
+		<field name="garyscookbook_name"
+			type="Gbusername"
+			id="garyscookbook-name"
+			size="30"
+			description="COM_GARYSCOOKBOOK_RECIPE_COMMENT_NAME_DESC"
+			label="COM_GARYSCOOKBOOK_RECIPE_COMMENT_NAME_LABEL"
+			filter="string"
+			required="true"
+		/>
+		<field name="garyscookbook_comment"
+			type="textarea"
+			cols="50"
+			rows="5"
+			id="garyscookbook-comment"
+			description="COM_GARYSCOOKBOOK_RECIPE_ENTER_MESSAGE_DESC"
+			label="COM_GARYSCOOKBOOK_RECIPE_ENTER_MESSAGE_LABEL"
+			filter="htmlsafe"
+			validate="garyscookbookcomment"
+			required="true"
+		/>
+	</fieldset>
+	<fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_GARYSCOOKBOOK_CAPTCHA_LABEL"
+			description="COM_GARYSCOOKBOOK_CAPTCHA_DESC"
+			validate="captcha"
+			namespace="Garyscookbook"
+		/>
+	</fieldset>
+</form>

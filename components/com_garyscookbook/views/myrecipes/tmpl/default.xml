@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id: default.xml 21748 2011-07-06 09:16:33Z chdemko $ -->
+<metadata>
+	<layout title="COM_GARYSCOOKBOOK_MYRECIPE_VIEW_DEFAULT_TITLE" option="COM_GARYSCOOKBOOK_MYRECIPE_VIEW_DEFAULT_OPTION">
+		<help
+			key = "JHELP_MENUS_MENU_ITEM_CONTACT_MYRECIPE"
+		/>
+		<message>
+			<![CDATA[COM_GARYSCOOKBOOK_MYRECIPE_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+
+	<!-- Add fields to the parameters object for the layout. -->
+<fields name="params">
+<fieldset name="basic" label="COM_GARYSCOOKBOOK_MYRECIPE_OPTIONS">
+
+			<field name="show_fav_description" type="list"
+				label="COM_GARYSCOOKBOOK_FIELD_SHOW_BASE_DESCRIPTION_LABEL"
+				description="COM_GARYSCOOKBOOK_FIELD_SHOW_BASE_DESCRIPTION_DESC"
+			>
+				<option value="0">COM_GARYSCOOKBOOK_FIELD_SHOW_MYRECIPE_ALL</option>
+				<option value="1">COM_GARYSCOOKBOOK_FIELD_SHOW_MYRECIPE_FAV_ONLY</option>
+				<option value="2">COM_GARYSCOOKBOOK_FIELD_SHOW_MYRECIPE_OWN_ONLY</option>
+			</field>
+
+</fieldset>
+</fields>
+
+</metadata>

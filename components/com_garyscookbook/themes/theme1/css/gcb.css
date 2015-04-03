@@ -1,0 +1,396 @@
+﻿/**
+ * @package Gary's Cookbook
+ * @author Gerald Berger
+ * @copyright (C) 2012 Gerald Berger
+ * @license GNU/GPL, see LICENSE.php / COPYRIGHT.php for copyright notices and details.
+ */
+
+#gcb-slider  {
+	margin:5px 0 0;
+	z-index:50;
+}
+#gcb-logo {
+
+}
+.gcb-footer{
+	text-align: center;
+	margin-top: 10px;
+}
+.gcbfooterlink{
+	margin-top: 10px;
+	text-align: center;
+	font-size: 0.8em;
+}
+.catbox {
+	display: -moz-inline-box; /* Firefox kleiner 3 */
+	display: inline-block; /* kompatible Browser */
+	width: 220px; /* stabilisiert aeltere Browser */
+	margin: 0.25em;
+	vertical-align: top;
+}
+
+.catbox div {/* stabilisiert Firefox kleiner 3 */
+	display: table;
+	padding: 5px
+}
+
+.catbox div div {
+	display: block;
+	width: 220px; /* stabilisiert Firefox kleiner 3 */
+}
+.gcb-item-title {
+	font-size: 12px;
+}
+.catbox a:hover {
+	background: none !important;
+}
+
+.gcbcatpic {
+	border: 0 none;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+
+.gcb-cat-children{
+	float:right;
+	width: 250px;
+	background: #f3f3f3;
+	padding: 5px;
+	border: 1px solid;
+	border-left-color: #EAEAEA;
+	border-top-color: #EAEAEA;
+	border-right-color: #808080;
+	border-bottom-color: #808080;
+	overflow:auto;
+	max-height: 150px;
+}
+.gcb-cat-children H3 {
+	margin-top: 2px !important;
+	margin-bottom: 2px !important;
+}
+.gcb-cat-children ul {
+	margin-top: 2px !important;
+	margin-bottom: 2px !important;
+}
+
+.gcb-category-desc {
+
+}
+.gcbpic {
+	border: 0 none;
+	float: left;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+.gcbicon {
+	border: 0 none;
+	vertical-align: bottom;
+}
+
+
+.recipebox {
+	display: -moz-inline-box; /* Firefox kleiner 3 */
+	display: inline-block; /* kompatible Browser */
+	width: 220px; /* stabilisiert aeltere Browser */
+	margin: 0.25em;
+	vertical-align: top;
+}
+
+.recipebox div {/* stabilisiert Firefox kleiner 3 */
+	display: table; 
+	padding: 5px;
+}
+
+.recipebox div div {
+	display: block;
+	width: 200px; /* stabilisiert Firefox kleiner 3 */
+	
+}
+
+.recipebox a:hover {
+	background: none !important;
+}
+
+
+#gcbpicplace {
+
+	float: left;
+	width: 49%;
+	height: 150px;
+}
+#gcbrecipeinfo{
+	margin-left: 49%;
+	position: relative;
+	width: 50%;
+}
+
+#gcbrecipeinfo li{
+	list-style:none !important;
+}
+#gcbrecipeinfo li a {
+	text-decoration: none;
+	background: none;
+}
+#gcbrecipeinfo li a:hover {
+
+}
+img a:hover{
+	background:none;
+}
+.detailpicbox {
+	display: -moz-inline-box; /* Firefox kleiner 3 */
+	display: inline-block; /* kompatible Browser */
+	margin: 0.25em;
+	vertical-align: top;
+}
+
+.detailpicbox div {/* stabilisiert Firefox kleiner 3 */
+	display: table;
+}
+
+.detailpicbox div div {
+	display: block;
+}
+
+.detailbox {
+	display: -moz-inline-box; /* Firefox kleiner 3 */
+	display: inline-block; /* kompatible Browser */
+	width: 280px; /* stabilisiert aeltere Browser */
+	margin: 0.25em;
+	vertical-align: top;
+}
+
+.detailbox div {/* stabilisiert Firefox kleiner 3 */
+	display: table;
+}
+
+.detailbox div div {
+	display: block;
+	width: 270px; /* stabilisiert Firefox kleiner 3 */
+}
+.gcb-Detail-title {
+	width: 120px !important;
+	font-weight: bold;
+	float: left;
+}
+.gcb-Detail-item {
+
+}
+.lidummy{
+	list-style: none;
+	line-height: 1px !important;
+}
+/*ab hier CSS für Voting*/
+.gcbvote-container{
+	display:inline-block;
+	line-height:25px;
+	vertical-align:middle;
+	margin-top:5px;
+}
+.gcbvote-container-small{
+	display:inline-block;
+	line-height:22px;
+	vertical-align:middle
+	margin-top:5px;
+}
+.gcbvote-item{
+	height:25px;
+	width:125px;
+	padding:0!important;
+	margin:0!important;
+}
+ul.gcbvote-items{
+	height:25px;
+	width:125px;
+	padding:0!important;
+	margin:0!important;
+}
+ul.gcbvote-items-small{
+	height:22px;
+	width:110px;
+	padding:0!important;
+	margin:0!important;
+}
+ul.gcbvote-items li,
+ul.gcbvote-items-small li{
+	background-position:0!important;
+	padding:0!important;
+	margin:0!important;
+}
+ul.gcbvote-items,
+ul.gcbvote-items li a:hover,
+ul.gcbvote-items li.current-rating{
+	background-image:url(../images/gcb.png)!important;
+	background-color:transparent!important;
+	background-repeat:repeat-x!important;
+	background-position:left -1000px;
+}
+ul.gcbvote-items-small,
+ul.gcbvote-items-small li a:hover,
+ul.gcbvote-items-small li.current-rating{
+	background-image:url(../images/gcb_small.png)!important;
+	background-color:transparent!important;
+	background-repeat:repeat-x!important;
+	background-position:left -1000px;
+}
+ul.gcbvote-items,
+ul.gcbvote-items-small{
+	background-position:left top;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0pt;
+	overflow:hidden;
+	padding:0pt;position:relative;
+}
+ul.gcbvote-items li,
+ul.gcbvote-items-small li{
+	background-image:none;
+	display:inline;padding:0pt;
+}
+ul.gcbvote-items li a,
+ul.gcbvote-items li.current-rating,
+ul.gcbvote-items-small li a,
+ul.gcbvote-items-small li.current-rating{
+	border:medium none;cursor:pointer;
+	left:0pt;
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:medium;
+	overflow:hidden;position:absolute;
+	text-indent:-1000em;top:0pt;
+}
+ul.gcbvote-items li a,
+ul.gcbvote-items li.current-rating{
+	height:25px;
+	line-height:25px;
+}
+ul.gcbvote-items-small li a,
+ul.gcbvote-items-small li.current-rating{
+	height:22px;
+	line-height:22px;
+}
+ul.gcbvote-items li a:hover,
+ul.gcbvote-items-small li a:hover{
+	background-position:left bottom!important;
+}
+ul.gcbvote-items li a:focus,
+ul.gcbvote-items li a:active,
+ul.gcbvote-items-small li a:focus,
+ul.gcbvote-items-small li a:active{
+	background:none!important;
+}
+ul.gcbvote-items li.current-rating,
+ul.gcbvote-items-small li.current-rating{
+	background-position:left center;
+	z-index:1;
+}
+
+li a.vot-item1{
+	width:20%;
+	padding:0;
+	margin:0;
+	z-index:6;
+}
+li a.vot-item2{
+	width:40%;
+	padding:0;
+	margin:0;
+	z-index:5;
+}
+li a.vot-item3{
+	width:60%;
+	padding:0;
+	margin:0;
+	z-index:4;
+}
+li a.vot-item4{
+	width:80%;
+	padding:0;
+	margin:0;
+	z-index:3;
+}
+li a.vot-item5{
+	width:100%;
+	padding:0;
+	margin:0;
+	z-index:2;
+}
+
+.gcbvote-count{
+	vertical-align:middle;
+}
+.gcbtext{
+
+}
+.gcbtext li {
+	list-style-image: none ;
+	list-style: none;
+}
+.ingedientform{
+
+}
+.gcbbutton{
+	font-size: 9px;
+}
+.ingedientform tr,
+.ingedientform td{
+	border: none !important;
+	padding-left: 5px;
+}
+/*Comments*/
+.gcbcmt{
+	border: none;
+}
+.gcbcmt tr {
+	border: 0;
+}
+.gcbcmt td {
+	border: 0;
+	padding: 3px 3px 8px 3px;
+}
+.gcbcmtrow1 {
+	background-color: #EEEEEE;
+}
+.gcbcmt hr {
+	margin-bottom: 5px;
+}
+.gcbcmtcol1{
+	width: 140px;
+}
+/*Favorites*/
+.garyscookbook-favorits{
+	width: 100%;
+}
+.gcbmyrecipes{
+	width: 100%;
+}
+.gcbeditorjs {
+	margin-bottom: 10px;
+}
+.gcbeditor {
+	margin-bottom: 50px;
+}
+
+.adminform td  {
+	border: 0;
+	padding: 3px;
+}
+.adminform tr  {
+	border: 0;
+}
+.gcbformlist li{
+	list-style-type: none;
+}
+fieldset.panelform {
+	overflow: hidden;
+	clear: both;
+}
+
+fieldset.panelform label {
+clear: left ;
+	min-width: 145px;
+	max-width: 250px;
+	padding: 0 5px 0 0;
+}
+

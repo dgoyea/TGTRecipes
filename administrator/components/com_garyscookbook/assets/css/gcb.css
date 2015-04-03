@@ -1,0 +1,25 @@
+﻿/**
+ * @package Garyscookbook  Backend
+ * @author Gerald Berger
+ * @copyright (C) 2012 Gerald Berger
+ */
+div.icon-48-gcbrecipes{
+	background: url('../images/48-gcbrecipes.png') no-repeat left;
+}
+div.icon-48-gcbcomments{
+	background: url('../images/48-gcbcomments.png') no-repeat left;
+}
+div.icon-48-language{
+	background: url('../images/48-language.png') no-repeat left;
+}
+.gcb_icon {
+	margin: 5px;
+	padding: 5px; 
+}
+.adminform {
+	border-color: #666666;
+	padding: 2px;
+}
+.adminform td {
+	padding: 3px 5px;
+}

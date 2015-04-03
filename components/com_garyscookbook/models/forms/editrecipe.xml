@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_categories/models/fields">
+		<field name="id" type="hidden"
+			default="0"
+			label="WEBLINK_ID_LABEL"
+			readonly="true"
+			required="true"
+			size="10"
+		/>
+
+		<field name="imgtitle" type="text"
+			description="COM_GARYSCOOKBOOK_FIELD_TITLE_DESC"
+			label="COM_GARYSCOOKBOOK_FIELD_TITLE"
+			required="true"
+			size="30"
+		/>
+
+		<field name="alias" type="text"
+			description="COM_GARYSCOOKBOOK_FIELD_ALIAS_DESC"
+			label="JFIELD_ALIAS_LABEL"
+			size="45"
+		/>
+
+
+
+		<field name="published" type="list"
+			default="1"
+			description="JFIELD_PUBLISHED_DESC"
+			label="JSTATUS"
+			size="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field name="catid"
+			type="categoryedit"
+			extension="com_garyscookbook"
+			label="JCATEGORY"
+			description="JFIELD_CATEGORY_DESC"
+			class="inputbox"
+			required="true"
+		/>
+
+		<field name="catid2"
+			type="gcbcategoryedit"
+			extension="com_garyscookbook"
+			label="COM_GARYSCOOKBOOK_CATEGORY"
+			description="COM_GARYSCOOKBOOK_CATEGORY_DESC"
+			class="inputbox"
+			default="1"
+		/>
+
+			<field name="catid3"
+			type="gcbcategoryedit"
+			extension="com_garyscookbook"
+			label="COM_GARYSCOOKBOOK_CATEGORY"
+			description="COM_GARYSCOOKBOOK_CATEGORY_DESC"
+			class="inputbox"
+			default="1"
+		/>
+
+		<field name="catid4"
+			type="gcbcategoryedit"
+			extension="com_garyscookbook"
+			label="COM_GARYSCOOKBOOK_CATEGORY"
+			description="COM_GARYSCOOKBOOK_CATEGORY_DESC"
+			class="inputbox"
+			default="1"
+		/>
+
+
+		<field name="catid5"
+			type="gcbcategoryedit"
+			extension="com_garyscookbook"
+			label="COM_GARYSCOOKBOOK_CATEGORY"
+			description="COM_GARYSCOOKBOOK_CATEGORY_DESC"
+			class="inputbox"
+			default="1"
+		/>
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_LANGUAGE_DESC" class="inputbox"
+		>
+			<option value="*">JALL</option>
+		</field>
+		<field name="imgtext" type="editor"
+			label="JGLOBAL_DESCRIPTION"
+			description="COM_GARYSCOOKBOOK_FIELD_DESCRIPTION_DESC"
+			class="inputbox"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			hide="readmore,pagebreak,image,article"
+			asset_id="com_garyscookbook"
+			 />
+
+		<field name="grapes" type="editor"
+			label="COM_GARYSCOOKBOOK_FIELD_GRAPES_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_GRAPES_DESC"
+			class="inputbox"
+			filter="JComponentHelper::filterText"
+			height="250"
+			buttons="true"
+			hide="readmore,pagebreak,image,article"
+			asset_id="com_garyscookbook"
+			 />
+		<field name="ingredients" type="text"
+			label="COM_GARYSCOOKBOOK_FIELD_INGREDIENTS_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INGREDIENTS_DESC"
+			class="inputbox"
+			size="30"
+		/>
+		<field name="price" type="text"
+			label="COM_GARYSCOOKBOOK_FIELD_PRICE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PRICE_DESC"
+			class="inputbox"
+			size="30"
+		/>
+
+		<field name="properties" type="editor"
+			label="COM_GARYSCOOKBOOK_FIELD_PROPERIES_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PROPERIES_DESC"
+			class="inputbox"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			hide="readmore,pagebreak,image,article"
+			asset_id="com_garyscookbook"
+			 />
+		<field name="notes" type="editor"
+			label="COM_GARYSCOOKBOOK_FIELD_NOTES_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_NOTES_DESC"
+			class="inputbox"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			hide="readmore,pagebreak,image,article"
+			asset_id="com_garyscookbook"
+			 />
+		<field name="doc" type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_DOC_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_DOC_DESC"
+			class="inputbox"
+			size="1"
+		>
+			<option value="0">JYES</option>
+			<option value="1">JNO</option>
+		</field>
+
+		<field name="vegan" type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_VEGAN_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_VEGAN_DESC"
+			class="inputbox"
+			size="1"
+		>
+			<option value="0">JYES</option>
+			<option value="1">JNO</option>
+		</field>
+
+		<field name="gluten" type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_GLUTEN_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_GLUTEN_DESC"
+			class="inputbox"
+			size="1"
+		>
+			<option value="0">JYES</option>
+			<option value="1">JNO</option>
+		</field>
+
+		<field name="laktose" type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_LAKTOSE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_LAKTOSE_DESC"
+			class="inputbox"
+			size="1"
+		>
+			<option value="0">JYES</option>
+			<option value="1">JNO</option>
+		</field>
+
+		<field name="diaet" type="list"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_DIAET_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_DIAET_DESC"
+			class="inputbox"
+			size="1"
+		>
+			<option value="0">JYES</option>
+			<option value="1">JNO</option>
+		</field>
+
+		<field name="country" type="countryedit"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_COUNTRY_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_COUNTRY_DESC"
+			size="1"
+		/>
+
+		<field name="portion" type="portionedit"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_PORTION_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_PORTION_DESC"
+			class="inputbox"
+			size="1"
+		/>
+
+		<field name="amount" type="text"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_AMOUNT_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_AMOUNT_DESC"
+			class="inputbox"
+			size="30"
+		/>
+
+		<field name="aging" type="difficultedit"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_AGING_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_AGING_DESC"
+			class="inputbox"
+			size="1"
+		/>
+
+		<field name="years"
+			type="preparationedit"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_YEARS_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_YEARS_DESC"
+			class="inputbox"
+			size="1"
+		/>
+
+		<field name="kcal"
+			type="text"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_KCAL_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_KCAL_DESC"
+			class="inputbox"
+			size="30"
+		/>
+
+		<field name="kjoule"
+			type="text"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_KJOULE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_KJOULE_DESC"
+			class="inputbox"
+			size="30"
+		/>
+
+		<field name="fat"
+			type="text"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_FAT_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_FAT_DESC"
+			class="inputbox"
+			size="30"
+		/>
+
+		<field name="breadunit"
+			type="text"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_BREADUNIT_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_BREADUNIT_DESC"
+			class="inputbox"
+			size="30"
+		/>
+
+		<field name="protein"
+			type="text"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_PROTEIN_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_PROTEIN_DESC"
+			class="inputbox"
+			size="30"
+		/>
+
+
+		<field name="carbohydrates"
+			type="text"
+			label="COM_GARYSCOOKBOOK_FIELD_INFORMATION_CARBO_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_INFORMATION_CARBO_DESC"
+			class="inputbox"
+			size="30"
+		/>
+
+		<field name="imgfilename" type="hidden" class="inputbox"
+			size="40" label="versteckt"
+			description="versteckt" />
+
+
+		<field name="imgfilenameup"
+			type="file"
+			size="40"
+			accept="image/jpg"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGE_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGE_DESC"
+			/>
+
+		<field name="expic1" type="hidden" class="inputbox"
+			size="40" label="versteckt"
+			description="versteckt" />
+
+		<field name="expic1up"
+			type="file"
+			size="40"
+			accept="image/jpg"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGEZ1_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGEZ_DESC"
+			/>
+
+		<field name="expic2" type="hidden" class="inputbox"
+			size="40" label="versteckt"
+			description="versteckt" />
+
+		<field name="expic2up"
+			type="file"
+			size="40"
+			accept="image/jpg"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGEZ1_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGEZ_DESC"
+			/>
+
+		<field name="expic3" type="hidden" class="inputbox"
+			size="40" label="versteckt"
+			description="versteckt" />
+
+		<field name="expic3up"
+			type="file"
+			size="40"
+			accept="image/jpg"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGEZ1_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGEZ_DESC"
+			/>
+
+		<field name="expic4" type="hidden" class="inputbox"
+			size="40" label="versteckt"
+			description="versteckt" />
+
+		<field name="expic4up"
+			type="file"
+			size="40"
+			accept="image/jpg"
+			label="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGEZ1_LABEL"
+			description="COM_GARYSCOOKBOOK_FIELD_PARAMS_IMAGEZ_DESC"
+			/>
+
+
+
+	</fieldset>
+</form>

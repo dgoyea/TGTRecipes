@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_tgtrecipes</name>
+	<author>David Goyea</author>
+	<creationDate>March 2015</creationDate>
+	<copyright>(C) 2015 Tailgate Territory. All rights reserved.
+	</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>dgoyea2@gmail.com</authorEmail>
+	<authorUrl>www.tailgateterritory.com</authorUrl>
+	<version>1.0.0</version>
+	<description>COM_TGTRECIPES_XML_DESCRIPTION</description>
+
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+ 
+	<files folder="site">
+		<filename>index.html</filename>
+	</files>
+	<administration>
+		<menu img="class:categories">COM_TGTRECIPES_MENU</menu>
+		
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>tgtrecipes.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+ 
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_tgtrecipes.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_tgtrecipes.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

@@ -1,0 +1,72 @@
+﻿/**
+ * @package		Garyscookbook.Site
+ * @subpackage	com_garyscookbook
+ * @copyright	Copyright (C) 2005 - 2012 Web and Edv Service Gerald Berger, Ove Eriksson, Jens Straube. All rights reserved.
+ * @license		GNU General Public License version 2 or later;
+ *
+ */
+
+#gcbCategorie{
+	width: 100%;
+	border: 0;
+	Margin: 1;  
+	padding: 4;
+}
+#gcbTopMain {
+	width: 98%;
+	margin: 4px;
+	padding: 3px;
+	border: 0;
+}
+#gcbheadertab {
+	 width: 50%;
+	 border: 0;
+	 margin: 0;
+	 padding: 3
+}
+#gcbsearch {
+	border: 1px solid; 
+	font: 10px Arial; 
+	width: 150px;
+}
+#gcbtable {
+	width: 100%;
+	border: 0;	
+	margin: 4px;
+	padding: 6px; 	
+}
+#gcbtab2 {
+	width: 100%;
+}
+#gcbPicTab {
+	border-left: 1px #fff solid;
+	border-top: 1px #fff solid;
+	border-right: 1px #808080 solid;
+	border-bottom: 1px #808080 solid;
+	width: 174px;
+}
+#gcbRightTab {
+	width: 100%;
+}
+.gcbDivider {
+	border-top-style: solid; 
+	border-top-width: 1px;
+}
+#gcbtab3 {
+	width: 100%;
+}
+#gcbTabDetail{
+	 width: 100%;
+	 border: 0;
+	 margin: 3;
+	 padding: 6;
+}
+#gcbnewbutton {
+	width: 50%;
+	vertical-align: bottom;
+	text-align: left;
+}
+#gcbsearchcombo{
+	width: 50%;
+	text-align: left;
+}
