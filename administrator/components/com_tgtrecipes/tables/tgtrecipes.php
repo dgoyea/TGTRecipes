@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die;
 
-class TgtrecipesTableTgtrecipe extends JTable
+class TgtrecipesTableTgtrecipes extends JTable
 {
 	public function __construct(&$db)
 	{
