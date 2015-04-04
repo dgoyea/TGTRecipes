@@ -5,7 +5,10 @@ class TgtrecipesModelTgtrecipe extends JModelAdmin
 {
 	protected $text_prefix = 'COM_TGTRECIPES';
 
-	public function getTable($type = 'Tgtrecipe', $prefix = 'TgtrecipesTable', $config = array())
+	// $type = view name
+	// $prefix = ComponentnameTable
+	
+	public function getTable($type = 'Tgtrecipes', $prefix = 'TgtrecipesTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -37,6 +40,6 @@ class TgtrecipesModelTgtrecipe extends JModelAdmin
 
 	protected function prepareTable($table)
 	{
-		$table->title		= htmlspecialchars_decode($table->title, ENT_QUOTES);
+		$table->title = htmlspecialchars_decode($table->title, ENT_QUOTES);
 	}
 }
