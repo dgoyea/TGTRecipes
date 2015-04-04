@@ -1,4 +1,12 @@
 <?php
+/**
+ * @package     Joomla.Administrator
+ * @subpackage  com_tgtrecipes
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
 defined('_JEXEC') or die;
 
 ?>
@@ -15,6 +23,22 @@ defined('_JEXEC') or die;
 					<div class="control-label"><?php echo $this->form->getLabel('title'); ?></div>
 					<div class="controls"><?php echo $this->form->getInput('title'); ?></div>
 				</div>
+				<div class="control-group">
+					<div class="control-label"><?php echo $this->form->getLabel('catid'); ?></div>
+					<div class="controls"><?php echo $this->form->getInput('catid'); ?></div>
+				</div>
+				<div class="control-group">
+					<div class="control-label"><?php echo $this->form->getLabel('image'); ?></div>
+					<div class="controls"><?php echo $this->form->getInput('image'); ?></div>
+				</div>
+				<div class="control-group">
+					<div class="control-label"><?php echo $this->form->getLabel('ingredients'); ?></div>
+					<div class="controls"><?php echo $this->form->getInput('ingredients'); ?></div>
+				</div>
+				<div class="control-group">
+					<div class="control-label"><?php echo $this->form->getLabel('directions'); ?></div>
+					<div class="controls"><?php echo $this->form->getInput('directions'); ?></div>
+				</div>						
 			<?php echo JHtml::_('bootstrap.endPanel'); ?>
 
 			<input type="hidden" name="task" value="" />

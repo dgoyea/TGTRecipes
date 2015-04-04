@@ -13,5 +13,52 @@
 			size="40" label="JFIELD_ALIAS_LABEL"
 			description="COM_TGTRECIPES_FIELD_ALIAS_DESC" />
 
+		<field
+			name="catid"
+			type="category"
+			extension="com_tgtrecipes"
+			class="inputbox"
+			default=""
+			label="COM_TGTRECIPES_FIELD_CATID_LABEL"
+			description="COM_TGTRECIPES_FIELD_CATID_DESC"
+		>
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+		
+		<field name="state" type="list"
+			label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+			class="inputbox small" size="1" default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field name="image" type="media" directory=""
+			hide_none="1" label="COM_TGTRECIPES_FIELD_IMAGE_LABEL"
+			size="40"
+			description="COM_TGTRECIPES_FIELD_IMAGE_DESC" 
+		/>
+		
+		<field 
+			name="ingredients" 
+			type="textarea" 
+			class="inputbox" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENTS_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENTS_DESC" 
+		/> 	
+			
+		<field 
+			name="directions" 
+			type="textarea" 
+			class="inputbox" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_DIRECTIONS_LABEL"
+			description="COM_TGTRECIPES_FIELD_DIRECTIONS_DESC" 
+		/> 
+
 	</fieldset>
 </form>
