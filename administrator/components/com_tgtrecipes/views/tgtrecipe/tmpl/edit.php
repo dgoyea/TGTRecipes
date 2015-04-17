@@ -11,6 +11,14 @@ defined('_JEXEC') or die;
 
 ?>
 
+<?php 
+JHtml::_('jquery.framework');
+JHtml::_('bootstrap.framework');
+$document = JFactory::getDocument();
+$document->addScript(JUri::root().'media/com_tgtrecipes/js/sample.js', 'text/javascript');
+?>
+
+
 <form action="<?php echo JRoute::_('index.php?option=com_tgtrecipes&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="adminForm" class="form-validate">
 	<div class="row-fluid">
 		<div class="span10 form-horizontal">
@@ -41,6 +49,8 @@ defined('_JEXEC') or die;
 				</div>						
 			<?php echo JHtml::_('bootstrap.endPanel'); ?>
 
+						<input type="text" name="test" value="" />
+			
 			<input type="hidden" name="task" value="" />
 			<?php echo JHtml::_('form.token'); ?>
 
