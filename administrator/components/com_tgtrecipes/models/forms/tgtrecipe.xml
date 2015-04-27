@@ -39,17 +39,7 @@
 			size="40"
 			description="COM_TGTRECIPES_FIELD_IMAGE_DESC" 
 		/>
-		
-		<field 
-			name="ingredients" 
-			type="textarea" 
-			class="inputbox" 
-			rows="3" 
-			cols="30" 
-			label="COM_TGTRECIPES_FIELD_INGREDIENTS_LABEL"
-			description="COM_TGTRECIPES_FIELD_INGREDIENTS_DESC" 
-		/> 	
-			
+
 		<field 
 			name="directions" 
 			type="textarea" 
@@ -59,6 +49,855 @@
 			label="COM_TGTRECIPES_FIELD_DIRECTIONS_LABEL"
 			description="COM_TGTRECIPES_FIELD_DIRECTIONS_DESC" 
 		/> 
+	
+	<!-- Repeating fields for ingredients.  Revisit later to clean-up. -->
+		<field 
+			name="ingredient1" 
+			id="ingredient1"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/> 
+	
+		<field 
+			name="ingrqty1" 
+			id="ingrqty1"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype1" 
+			id="ingrqtytype1"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+		
+		<field 
+			name="ingredient2" 
+			id="ingredient2"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/> 
+		
+		<field 
+			name="ingrqty2" 
+			id="ingrqty2"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype2" 
+			id="ingrqtytype2"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+		
+		<field 
+			name="ingredient3" 
+			id="ingredient3"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty3" 
+			id="ingrqty3"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype3" 
+			id="ingrqtytype3"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+		
+		<field 
+			name="ingredient4" 
+			id="ingredient4"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty4" 
+			id="ingrqty4"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype4" 
+			id="ingrqtytype4"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient5" 
+			id="ingredient5"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty5" 
+			id="ingrqty5"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype5" 
+			id="ingrqtytype5"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient6" 
+			id="ingredient6"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty6" 
+			id="ingrqty6"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype6" 
+			id="ingrqtytype6"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient7" 
+			id="ingredient7"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty7" 
+			id="ingrqty7"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype7" 
+			id="ingrqtytype7"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient8" 
+			id="ingredient8"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty8" 
+			id="ingrqty8"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype8" 
+			id="ingrqtytype8"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient9" 
+			id="ingredient9"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty9" 
+			id="ingrqty9"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype9" 
+			id="ingrqtytype9"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient10" 
+			id="ingredient10"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty10" 
+			id="ingrqty10"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype10" 
+			id="ingrqtytype10"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient11" 
+			id="ingredient11"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty11" 
+			id="ingrqty11"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype11" 
+			id="ingrqtytype11"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient12" 
+			id="ingredient12"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty12" 
+			id="ingrqty12"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype12" 
+			id="ingrqtytype12"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient13" 
+			id="ingredient13"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty13" 
+			id="ingrqty13"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype13" 
+			id="ingrqtytype13"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient14" 
+			id="ingredient14"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty14" 
+			id="ingrqty14"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype14" 
+			id="ingrqtytype14"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient15" 
+			id="ingredient15"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty15" 
+			id="ingrqty15"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype15" 
+			id="ingrqtytype15"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient16" 
+			id="ingredient16"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty16" 
+			id="ingrqty16"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype16" 
+			id="ingrqtytype16"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient17" 
+			id="ingredient17"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty17" 
+			id="ingrqty17"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype17" 
+			id="ingrqtytype17"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient18" 
+			id="ingredient18"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty18" 
+			id="ingrqty18"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype18" 
+			id="ingrqtytype18"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient19" 
+			id="ingredient19"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty19" 
+			id="ingrqty19"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype19" 
+			id="ingrqtytype19"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient20" 
+			id="ingredient20"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty20" 
+			id="ingrqty20"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype20" 
+			id="ingrqtytype20"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient21" 
+			id="ingredient21"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty21" 
+			id="ingrqty21"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype21" 
+			id="ingrqtytype21"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient22" 
+			id="ingredient22"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty22" 
+			id="ingrqty22"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype22" 
+			id="ingrqtytype22"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient23" 
+			id="ingredient23"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty23" 
+			id="ingrqty23"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype23" 
+			id="ingrqtytype23"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient24" 
+			id="ingredient24"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty24" 
+			id="ingrqty24"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype24" 
+			id="ingrqtytype24"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+		
+		<field 
+			name="ingredient25" 
+			id="ingredient25"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_DESC" 
+		/>
+		
+		<field 
+			name="ingrqty25" 
+			id="ingrqty25"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="5" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_DESC" 
+		/> 
+
+		<field 
+			name="ingrqtytype25" 
+			id="ingrqtytype25"
+			type="text" 
+			class="input-small" 
+			rows="3" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_INGREDIENT_QUANTITY_TYPE_DESC" 
+		/> 
+
+
 
 	</fieldset>
 </form>

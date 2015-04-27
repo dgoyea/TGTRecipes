@@ -15,7 +15,7 @@ defined('_JEXEC') or die;
 JHtml::_('jquery.framework');
 JHtml::_('bootstrap.framework');
 $document = JFactory::getDocument();
-$document->addScript(JUri::root().'media/com_tgtrecipes/js/sample.js', 'text/javascript');
+$document->addScript(JUri::root().'media/com_tgtrecipes/js/recipeform.js', 'text/javascript');
 ?>
 
 
@@ -40,17 +40,65 @@ $document->addScript(JUri::root().'media/com_tgtrecipes/js/sample.js', 'text/jav
 					<div class="controls"><?php echo $this->form->getInput('image'); ?></div>
 				</div>
 				<div class="control-group">
-					<div class="control-label"><?php echo $this->form->getLabel('ingredients'); ?></div>
-					<div class="controls"><?php echo $this->form->getInput('ingredients'); ?></div>
-				</div>
-				<div class="control-group">
 					<div class="control-label"><?php echo $this->form->getLabel('directions'); ?></div>
 					<div class="controls"><?php echo $this->form->getInput('directions'); ?></div>
-				</div>						
-			<?php echo JHtml::_('bootstrap.endPanel'); ?>
+				</div>	
+				
+				<!-- Dynamic fields -->
 
-						<input type="text" name="test" value="" />
-			
+				
+				<?php 
+				echo "<table style=\"width:30%\" class=\"table table-hover\">";
+				echo "<th>#</th>";
+				echo "<th>Quantity</th>";
+				echo "<th>Measurement</th>";
+				echo "<th>Ingredient</th>";				
+				
+				
+				for ($x = 1; $x < 26; $x++) {
+					$ingr = "ingredient" . $x;
+					$ingrqty = "ingrqty". $x;
+					$ingrqtytype = "ingrqtytype". $x;
+					
+					echo "<tr>";
+					echo "<th scope=\"row\">$x</th>";
+					echo "<td>";
+					echo $this->form->getInput($ingrqty);
+					echo "</td>";
+					echo "<td>";
+					echo $this->form->getInput($ingrqtytype);
+					echo "</td>";
+					echo "<td>";
+					echo $this->form->getInput($ingr);
+					echo "</td>";					
+					echo "</tr>";
+		
+
+				}
+				echo "</table>";		
+				?>
+				
+				<!-- Dynamic fields for ingredients. Does not use jForm. -->
+				<div class="control-group">
+					<input label="amount" type="number" id="amount1" name="amount1" value="" />
+					<input label="ingredient" type="text" id="ingredient1" name="ingredient1" value="" />
+					<button type="button" name="button1" id="button1">Add</button>
+				</div>	
+				<div class="control-group">
+					<input label="amount" type="number" id="amount2" name="amount2" value="" />
+					<input label="ingredient" type="text" id="ingredient2" name="ingredient2" value="" />
+					<button type="button" name="button2" id="button2">Add</button>
+				</div>
+					
+				<div class="control-group" id="cg3">
+					<input label="amount" type="number" id="amount3" name="amount3" value="" />
+					<input label="ingredient" type="text" id="ingredient3" name="ingredient3" value="" />
+					<button type="button" name="button3" id="button3">Add</button>
+				</div>					
+				
+													
+			<?php echo JHtml::_('bootstrap.endPanel'); ?>
+						
 			<input type="hidden" name="task" value="" />
 			<?php echo JHtml::_('form.token'); ?>
 
