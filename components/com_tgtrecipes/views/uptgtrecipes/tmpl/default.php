@@ -27,7 +27,7 @@ else
 	<form action="<?php echo JRoute::_('index.php?option=com_tgtrecipes&view=uptgtrecipes'); ?>" method="post" name="adminForm" id="adminForm">
 		<div class="btn-toolbar">
 			<div class="btn-group">
-				<button type="button" class="btn btn-primary" onclick="Joomla.submitbutton('uptgtrecipes.add')">
+				<button type="button" class="btn btn-primary" onclick="Joomla.submitbutton('uptgtrecipe.add')">
 					<i class="icon-new"></i> <?php echo JText::_('JNEW') ?>
 				</button>
 			</div>
@@ -88,7 +88,7 @@ else
 						</td>
 						<td class="nowrap has-context">
 							<?php if ($canEdit) : ?>
-								<a href="<?php echo JRoute::_('index.php?option=com_tgtrecipes&task=uptgtrecipes.edit&id='.(int) $item->id); ?>">
+								<a href="<?php echo JRoute::_('index.php?option=com_tgtrecipes&task=uptgtrecipe.edit&id='.(int) $item->id); ?>">
 									<?php echo $this->escape($item->title); ?>
 								</a>
 							<?php else : ?>

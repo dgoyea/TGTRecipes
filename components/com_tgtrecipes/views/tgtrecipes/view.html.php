@@ -20,10 +20,16 @@ defined('_JEXEC') or die;
 class TgtrecipesViewTgtrecipes extends JViewLegacy
 {
 	protected $items;
+	
+	protected $state;
+	
+	protected $pagination;	
 
 	public function display($tpl = null)
 	{
 		$this->items = $this->get('Items');
+		$this->state = $this->get('State');
+		$this->pagination = $this->get('Pagination');		
 
 		if (count($errors = $this->get('Errors')))
 		{
@@ -33,4 +39,26 @@ class TgtrecipesViewTgtrecipes extends JViewLegacy
 
 		parent::display($tpl);
 	}
+	
+	/**
+	 * Sort Fields function to setup fields which can be sorted
+	 *
+	 *
+	 * @package Joomla.administrator
+	 * @subpackage com_tgtrecipes
+	 *
+	 *
+	 * @param
+	 * @return
+	 * @since   1.0
+	 */
+	protected function getSortFields()
+	{
+		return array(
+				'a.ordering' => JText::_('JGRID_HEADING_ORDERING'),
+				'a.state' => JText::_('JSTATUS'),
+				'a.title' => JText::_('JGLOBAL_TITLE'),
+				'a.id' => JText::_('JGRID_HEADING_ID')
+		);
+	}	
 }

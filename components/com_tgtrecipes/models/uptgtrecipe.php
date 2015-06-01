@@ -17,7 +17,7 @@ defined('_JEXEC') or die;
  * @subpackage  com_tgtrecipes
  * @since       1.0
  */
-class TgtrecipesModelTgtrecipe extends JModelAdmin
+class TgtrecipesModelUptgtrecipe extends JModelAdmin
 {
 	protected $text_prefix = 'COM_TGTRECIPES';
 
@@ -68,7 +68,7 @@ class TgtrecipesModelTgtrecipe extends JModelAdmin
 	protected function canEditState($record)
 	{
 		$user = JFactory::getUser();
-
+		
 		if (!empty($record->catid))
 		{
 			return $user->authorise('core.edit.state', 'com_tgtrecipes.category.'.(int) $record->catid);
@@ -110,7 +110,6 @@ class TgtrecipesModelTgtrecipe extends JModelAdmin
      */
 	public function getForm($data = array(), $loadData = true)
 	{
-		$app = JFactory::getApplication();
 
 		$form = $this->loadForm('com_tgtrecipes.tgtrecipe', 'tgtrecipe', array('control' => 'jform', 'load_data' => $loadData));
 		if (empty($form))

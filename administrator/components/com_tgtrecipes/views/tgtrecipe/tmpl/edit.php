@@ -45,7 +45,6 @@ $document->addScript(JUri::root().'media/com_tgtrecipes/js/recipeform.js', 'text
 				</div>	
 				
 				<!-- Dynamic fields -->
-
 				
 				<?php 
 				echo "<table style=\"width:30%\" class=\"table table-hover\">";
@@ -77,25 +76,7 @@ $document->addScript(JUri::root().'media/com_tgtrecipes/js/recipeform.js', 'text
 				}
 				echo "</table>";		
 				?>
-				
-				<!-- Dynamic fields for ingredients. Does not use jForm. -->
-				<div class="control-group">
-					<input label="amount" type="number" id="amount1" name="amount1" value="" />
-					<input label="ingredient" type="text" id="ingredient1" name="ingredient1" value="" />
-					<button type="button" name="button1" id="button1">Add</button>
-				</div>	
-				<div class="control-group">
-					<input label="amount" type="number" id="amount2" name="amount2" value="" />
-					<input label="ingredient" type="text" id="ingredient2" name="ingredient2" value="" />
-					<button type="button" name="button2" id="button2">Add</button>
-				</div>
-					
-				<div class="control-group" id="cg3">
-					<input label="amount" type="number" id="amount3" name="amount3" value="" />
-					<input label="ingredient" type="text" id="ingredient3" name="ingredient3" value="" />
-					<button type="button" name="button3" id="button3">Add</button>
-				</div>					
-				
+	
 													
 			<?php echo JHtml::_('bootstrap.endPanel'); ?>
 						

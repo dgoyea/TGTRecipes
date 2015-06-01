@@ -36,21 +36,60 @@ defined('_JEXEC') or die;
 	<fieldset>
 		<?php echo JHtml::_('bootstrap.startPane', 'myTab', array('active' => 'details')); ?>
 
-			<?php echo JHtml::_('bootstrap.addPanel', 'myTab', 'details', empty($this->item->id) ? JText::_('COM_TGTRECIPES_NEW_TGTRECIPE', true) : JText::sprintf('COM_TGTRECIPE_EDIT_TGTRECIPE', $this->item->id, true)); ?>
+			<?php echo JHtml::_('bootstrap.addPanel', 'myTab', 'details', empty($this->item->id) ? JText::_('COM_TGTRECIPES_NEW_TGTRECIPE', true) : JText::sprintf('COM_TGTRECIPES_EDIT_TGTRECIPE', $this->item->id, true)); ?>
+				<div class="control-group">
+					<div class="control-label"><?php echo $this->form->getLabel('title'); ?></div>
+					<div class="controls"><?php echo $this->form->getInput('title'); ?></div>
+				</div>
+				<div class="control-group">
+					<div class="control-label"><?php echo $this->form->getLabel('catid'); ?></div>
+					<div class="controls"><?php echo $this->form->getInput('catid'); ?></div>
+				</div>
+				<div class="control-group">
+					<div class="control-label"><?php echo $this->form->getLabel('image'); ?></div>
+					<div class="controls"><?php echo $this->form->getInput('image'); ?></div>
+				</div>
+				<div class="control-group">
+					<div class="control-label"><?php echo $this->form->getLabel('directions'); ?></div>
+					<div class="controls"><?php echo $this->form->getInput('directions'); ?></div>
+				</div>	
+				
+				<!-- Dynamic fields -->
+				
+				<?php 
+				echo "<table style=\"width:30%\" class=\"table table-hover\">";
+				echo "<th>#</th>";
+				echo "<th>Quantity</th>";
+				echo "<th>Measurement</th>";
+				echo "<th>Ingredient</th>";				
+				
+				
+				for ($x = 1; $x < 26; $x++) {
+					$ingr = "ingredient" . $x;
+					$ingrqty = "ingrqty". $x;
+					$ingrqtytype = "ingrqtytype". $x;
+					
+					echo "<tr>";
+					echo "<th scope=\"row\">$x</th>";
+					echo "<td>";
+					echo $this->form->getInput($ingrqty);
+					echo "</td>";
+					echo "<td>";
+					echo $this->form->getInput($ingrqtytype);
+					echo "</td>";
+					echo "<td>";
+					echo $this->form->getInput($ingr);
+					echo "</td>";					
+					echo "</tr>";
+		
 
-				<?php foreach ($this->form->getFieldset('myfields') as $field) : ?>
-					<div class="control-group">
-						<div class="control-label">
-							<?php echo $field->label; ?>
-						</div>
-						<div class="controls">
-							<?php echo $field->input; ?>
-						</div>
-					</div>
-				<?php endforeach; ?>
-
+				}
+				echo "</table>";		
+				?>
+	
+													
 			<?php echo JHtml::_('bootstrap.endPanel'); ?>
-
+						
 			<input type="hidden" name="task" value="" />
 			<?php echo JHtml::_('form.token'); ?>
 
