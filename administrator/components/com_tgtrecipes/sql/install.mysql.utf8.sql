@@ -87,3 +87,35 @@ CREATE TABLE IF NOT EXISTS `#__tgtrecipes` (
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `#__tgtlotreviews` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `lotname` varchar(250) NOT NULL DEFAULT '',
+  `venueid` int(11) NOT NULL DEFAULT '0',
+  `eventtype` varchar(250) NOT NULL DEFAULT '',
+  `ordering` int(11) NOT NULL DEFAULT '0',
+  `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `#__tgtlotvenues` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `venuename` varchar(250) NOT NULL DEFAULT '',
+  `eventid` int(11) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT '0',
+  `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;   
+
+CREATE TABLE IF NOT EXISTS `#__tgtlotevents` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `eventname` varchar(250) NOT NULL DEFAULT '',
+  `venueid` int(11) NOT NULL DEFAULT '0',
+  `ordering` int(11) NOT NULL DEFAULT '0',
+  `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;    
+  

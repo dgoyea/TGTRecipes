@@ -15,15 +15,15 @@ defined('_JEXEC') or die;
  *
  * @package     Joomla.Administrator
  * @subpackage  com_tgtrecipes
- * @since       1.0
+ * @since       1.3
  */
-class TgtrecipesViewTgtrecipe extends JViewLegacy
+class TgtrecipesViewTgtlotreview extends JViewLegacy
 {
 	 /**
      * Array to store data from the model
      *
      * @var    $item = array
-     * @since  1.0
+     * @since  1.3
      */
 	protected $item;
 	
@@ -31,20 +31,19 @@ class TgtrecipesViewTgtrecipe extends JViewLegacy
      * Used to build form
      *
      * @var    $form = Joomla form
-     * @since  1.0
+     * @since  1.3
      */	
 	protected $form;
 
 	/**
 	 * Function to display the view, called by default
 	 *
-	 *
 	 * @package Joomla.administrator
 	 * @subpackage com_tgtrecipes
 	 *
 	 * @param   $tpl = null
 	 * @return  parent
-	 * @since   1.0
+	 * @since   1.3
 	 */
 	public function display($tpl = null)
 	{
@@ -70,23 +69,23 @@ class TgtrecipesViewTgtrecipe extends JViewLegacy
 	 *
 	 * @param   n/a
 	 * @return  n/a
-	 * @since   1.0
+	 * @since   1.3
 	 */
 	protected function addToolbar()
 	{
 		JFactory::getApplication()->input->set('hidemainmenu', true);
 
-		JToolbarHelper::title(JText::_('COM_TGTRECIPES_MANAGER_TGTRECIPE'), '');
+		JToolbarHelper::title(JText::_('COM_TGTRECIPES_MANAGER_TGTLOTREVIEW'), '');
 
-		JToolbarHelper::save('tgtrecipe.save');
+		JToolbarHelper::save('tgtlotreview.save');
 
 		if (empty($this->item->id))
 		{
-			JToolbarHelper::cancel('tgtrecipe.cancel');
+			JToolbarHelper::cancel('tgtlotreview.cancel');
 		}
 		else
 		{
-			JToolbarHelper::cancel('tgtrecipe.cancel', 'JTOOLBAR_CLOSE');
+			JToolbarHelper::cancel('tgtlotreview.cancel', 'JTOOLBAR_CLOSE');
 		}
 	}
 }

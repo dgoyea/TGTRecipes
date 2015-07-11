@@ -13,16 +13,16 @@ defined('_JEXEC') or die;
  *
  * @package     Joomla.Administrator
  * @subpackage  com_tgtrecipes
- * @since       1.0
+ * @since       1.3
  */
-class TgtRecipesViewTgtrecipes extends JViewLegacy
+class TgtRecipesViewTgtlotreviews extends JViewLegacy
 {
 	
     /**
      * Array of data retrieved from model
      *
      * @var    array
-     * @since  1.0
+     * @since  1.3
      */	
 	protected $items;
 
@@ -35,7 +35,7 @@ class TgtRecipesViewTgtrecipes extends JViewLegacy
      *
      * @param   $tpl = null
      * @return  parent
-     * @since   1.0
+     * @since   1.3
      */
 	public function display($tpl = null)
 	{
@@ -60,7 +60,7 @@ class TgtRecipesViewTgtrecipes extends JViewLegacy
      *
      * @param   n/a
      * @return  n/a
-     * @since   1.0
+     * @since   1.3
      */
 	protected function addToolbar()
 	{
@@ -69,11 +69,11 @@ class TgtRecipesViewTgtrecipes extends JViewLegacy
 
 		JToolbarHelper::title(JText::_('COM_TGTRECIPES_MANAGER_TGTRECIPES'), '');
 
-		JToolbarHelper::addNew('tgtrecipe.add');
+		JToolbarHelper::addNew('tgtlotreview.add');
 
 		if ($canDo->get('core.edit'))
 		{
-			JToolbarHelper::editList('tgtrecipe.edit');
+			JToolbarHelper::editList('tgtlotreview.edit');
 		}
 		if ($canDo->get('core.admin'))
 		{

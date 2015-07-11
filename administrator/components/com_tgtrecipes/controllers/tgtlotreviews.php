@@ -11,14 +11,14 @@
 defined('_JEXEC') or die;
 
     /**
-     * Controller for Tgtrecipes admin
+     * Controller for Tgtlotreviews admin
      *
      * @var    
-     * @since  1.0
+     * @since  1.3
      */
-class TgtrecipesControllerTgtrecipes extends JControllerAdmin
+class TgtrecipesControllerTgtlotreviews extends JControllerAdmin
 {
-	public function getModel($name = 'Tgtrecipe', $prefix = 'TgtrecipesModel', $config = array('ignore_request' => true))
+	public function getModel($name = 'Tgtlotreview', $prefix = 'TgtrecipesModel', $config = array('ignore_request' => true))
 	{
 		$model = parent::getModel($name, $prefix, $config);
 		return $model;

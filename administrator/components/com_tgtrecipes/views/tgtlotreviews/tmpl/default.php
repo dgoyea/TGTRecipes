@@ -14,18 +14,18 @@ $listOrder	= '';
 $listDirn	= '';
 ?>
 
-<form action="<?php echo JRoute::_('index.php?option=com_tgtrecipes&view=tgtrecipes'); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo JRoute::_('index.php?option=com_tgtrecipes&view=tgtlotreviews'); ?>" method="post" name="adminForm" id="adminForm">
 	<div id="j-main-container" class="span10">
 
 		<div class="clearfix"> </div>
-		<table class="table table-striped" id="tgtrecipesList">
+		<table class="table table-striped" id="tgtlotreviewsList">
 			<thead>
 				<tr>
 					<th width="1%" class="hidden-phone">
 						<input type="checkbox" name="checkall-toggle" value="" title="<?php echo JText::_('JGLOBAL_CHECK_ALL'); ?>" onclick="Joomla.checkAll(this)" />
 					</th>
-					<th class="title">
-						<?php echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder); ?>
+					<th class="Lot">
+						<?php echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.lotname', $listDirn, $listOrder); ?>
 					</th>
 				</tr>
 			</thead>
@@ -37,8 +37,8 @@ $listDirn	= '';
 						<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 					</td>
 					<td class="nowrap has-context">
-						<a href="<?php echo JRoute::_('index.php?option=com_tgtrecipes&task=tgtrecipe.edit&id='.(int) $item->id); ?>">
-							<?php echo $this->escape($item->title); ?>
+						<a href="<?php echo JRoute::_('index.php?option=com_tgtlotreviews&task=tgtlotreview.edit&id='.(int) $item->id); ?>">
+							<?php echo $this->escape($item->lotname); ?>
 						</a>
 					</td>
 				</tr>

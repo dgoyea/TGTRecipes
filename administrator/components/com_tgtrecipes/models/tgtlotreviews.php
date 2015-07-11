@@ -11,13 +11,13 @@
 defined('_JEXEC') or die;
 
 /**
- * Model for Tgtrecipes admin view
+ * Model for Tgtlotreviews admin view
  *
  * @package     Joomla.Administrator
  * @subpackage  com_tgtrecipes
- * @since       1.0
+ * @since       1.3
  */
-class TgtrecipesModelTgtrecipes extends JModelList
+class TgtrecipesModelTgtlotreviews extends JModelList
 {
 	
 	 /**
@@ -28,7 +28,7 @@ class TgtrecipesModelTgtrecipes extends JModelList
      *
      * @param   $config = array
      * @return  $config = array
-     * @since   1.0
+     * @since   1.3
      */
 	public function __construct($config = array())
 	{
@@ -36,7 +36,10 @@ class TgtrecipesModelTgtrecipes extends JModelList
 		{
 			$config['filter_fields'] = array(
 				'id', 'a.id',
-				'title', 'a.title',
+				'lotname', 'a.lotname',
+				'venueid', 'a.venueid',
+				'eventtype', 'a.eventtype',
+				'ordering', 'a.ordering'
 			);
 		}
 
@@ -52,7 +55,7 @@ class TgtrecipesModelTgtrecipes extends JModelList
      *
      * @param   
      * @return  $query = query object
-     * @since   1.0
+     * @since   1.3
      */
 	protected function getListQuery()
 	{
@@ -62,10 +65,12 @@ class TgtrecipesModelTgtrecipes extends JModelList
 		$query->select(
 			$this->getState(
 				'list.select',
-				'a.id, a.title'
+				'a.id, a.lotname',
+				'a.venueid, a.eventtype',
+				'a.ordering'
 			)
 		);
-		$query->from($db->quoteName('#__tgtrecipes').' AS a');
+		$query->from($db->quoteName('#__tgtlotreviews').' AS a');
 
 		return $query;
 	}

@@ -11,13 +11,13 @@
 defined('_JEXEC') or die;
 
 /**
- * Table file for Tgtrecipes
+ * Table file for Tgtlotreviews
  *
  * @package     Joomla.Administrator
  * @subpackage  com_tgtrecipes
- * @since       1.0
+ * @since       1.3
  */
-class TgtrecipesTableTgtrecipes extends JTable
+class TgtrecipesTableTgtlotreviews extends JTable
 {
 	
 	 /**
@@ -28,11 +28,11 @@ class TgtrecipesTableTgtrecipes extends JTable
      *
      * @param   $db = database
      * @return  parent
-     * @since   1.0
+     * @since   1.3
      */
 	public function __construct(&$db)
 	{
-		parent::__construct('#__tgtrecipes', 'id', $db);
+		parent::__construct('#__tgtlotreviews', 'id', $db);
 	}
 
     /**
@@ -45,7 +45,7 @@ class TgtrecipesTableTgtrecipes extends JTable
      * @param   $array = data array
      * 			$ignore = unknown
      * @return  parent
-     * @since   1.0
+     * @since   1.3
      */
 	public function bind($array, $ignore = '')
 	{
@@ -61,7 +61,7 @@ class TgtrecipesTableTgtrecipes extends JTable
      *
      * @param   $updateNulls = boolean on whether or not to update nulls
      * @return  parent
-     * @since   1.0
+     * @since   1.3
      */
 	public function store($updateNulls = false)
 	{

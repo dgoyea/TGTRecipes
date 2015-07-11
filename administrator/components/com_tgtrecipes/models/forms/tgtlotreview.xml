@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+
+		<field
+			name="catid"
+			type="category"
+			extension="com_tgtrecipes"
+			class="inputbox"
+			default=""
+			label="COM_TGTRECIPES_FIELD_CATID_LABEL"
+			description="COM_TGTRECIPES_FIELD_CATID_DESC"
+		>
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+		
+		<field name="state" type="list"
+			label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+			class="inputbox small" size="1" default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+
+		<field name="image" type="media" directory=""
+			hide_none="1" label="COM_TGTRECIPES_FIELD_IMAGE_LABEL"
+			size="40"
+			description="COM_TGTRECIPES_FIELD_IMAGE_DESC" 
+		/>
+
+		<field 
+			name="lotname" 
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_LOT_NAME_LABEL"
+			description="COM_TGTRECIPES_FIELD_LOT_NAME_DESC" 
+		/> 
+	
+		<field 
+			name="venuename" 
+			id="venuename"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_VENUE_NAME_LABEL"
+			description="COM_TGTRECIPES_FIELD_VENUE_NAME_DESC" 
+		/> 
+	
+		<field 
+			name="eventtype" 
+			id="eventtype"
+			type="text" 
+			class="text" 
+			rows="1" 
+			cols="30" 
+			label="COM_TGTRECIPES_FIELD_EVENT_TYPE_LABEL"
+			description="COM_TGTRECIPES_FIELD_EVENT_TYPE_DESC" 
+		/> 
+
+	</fieldset>
+</form>
