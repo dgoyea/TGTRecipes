@@ -25,8 +25,11 @@ $listDirn	= '';
 						<input type="checkbox" name="checkall-toggle" value="" title="<?php echo JText::_('JGLOBAL_CHECK_ALL'); ?>" onclick="Joomla.checkAll(this)" />
 					</th>
 					<th class="Lot">
-						<?php echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.lotname', $listDirn, $listOrder); ?>
+						<?php echo JHtml::_('grid.sort', 'Lot', 'a.lotname', $listDirn, $listOrder); ?>
 					</th>
+					<th class="Venue">
+						<?php echo JHtml::_('grid.sort', 'Venue', 'venuename', $listDirn, $listOrder); ?>
+					</th>					
 				</tr>
 			</thead>
 			<tbody>
@@ -37,10 +40,13 @@ $listDirn	= '';
 						<?php echo JHtml::_('grid.id', $i, $item->id); ?>
 					</td>
 					<td class="nowrap has-context">
-						<a href="<?php echo JRoute::_('index.php?option=com_tgtlotreviews&task=tgtlotreview.edit&id='.(int) $item->id); ?>">
+						<a href="<?php echo JRoute::_('index.php?option=com_tgtrecipes&task=tgtlotreview.edit&id='.(int) $item->id); ?>">
 							<?php echo $this->escape($item->lotname); ?>
 						</a>
 					</td>
+					<td class="nowrap has-context">
+						<?php echo $this->escape($item->venuename); ?>
+					</td>					
 				</tr>
 				<?php endforeach; ?>
 			</tbody>

@@ -57,6 +57,7 @@ class TgtrecipesViewTgtlotreview extends JViewLegacy
 		}
 
 		$this->addToolbar();
+		$this->setTgtData();
 		parent::display($tpl);
 	}
 
@@ -86,6 +87,35 @@ class TgtrecipesViewTgtlotreview extends JViewLegacy
 		else
 		{
 			JToolbarHelper::cancel('tgtlotreview.cancel', 'JTOOLBAR_CLOSE');
+		}
+	}
+	
+    /**
+     * Clean up data for Lot Review form
+     * 
+     * @package Joomla.administrator
+     * @subpackage com_tgtrecipes
+     *
+     * @param   n/a
+     * @return  n/a
+     * @since   1.3
+     */
+	protected function setTgtData()
+	{
+		error_log('TgtrecipesViewTgtlotreview.setTgtData');
+		
+		$venueid = $this->form->getValue('venueid');
+		if ($venueid != 1 or $venueid = null ) 
+		{
+			error_log('getting in here');
+			error_log('venueid = ' . $venueid);
+			
+			$venuename = $this->form->getValue('venuename', null, null);
+			error_log('venuename = ' . $venuename);
+			
+			// This is a workaround to set the venuename back to the venueid. Otherwise the sql field used in 
+			// the view.xml seems to default to the first value found in the DB after the first time a review is created.
+			$this->form->setValue('venuename',null,$venueid);
 		}
 	}
 }

@@ -45,12 +45,12 @@
 		<field 
 			name="venuename" 
 			id="venuename"
-			type="text" 
+			type="sql" 
 			class="text" 
-			rows="1" 
-			cols="30" 
 			label="COM_TGTRECIPES_VENUE_NAME_LABEL"
-			description="COM_TGTRECIPES_FIELD_VENUE_NAME_DESC" 
+			description="COM_TGTRECIPES_FIELD_VENUE_NAME_DESC"
+			query="SELECT id AS value, venuename from #__tgtlotvenues" 
+			default="1"
 		/> 
 	
 		<field 
@@ -63,6 +63,20 @@
 			label="COM_TGTRECIPES_FIELD_EVENT_TYPE_LABEL"
 			description="COM_TGTRECIPES_FIELD_EVENT_TYPE_DESC" 
 		/> 
+		
+		<field
+			name="venuelist"
+			type="venuelist"
+			class="text"
+			rows="1"
+			columns="30"
+		/>
+		
+		<field
+			name="venueid"
+			id="venueid"
+			type="hidden"
+		/>
 
 	</fieldset>
 </form>

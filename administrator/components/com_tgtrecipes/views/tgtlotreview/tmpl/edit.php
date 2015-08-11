@@ -48,7 +48,10 @@ JHtml::_('bootstrap.framework');
 				<div class="control-group">
 					<div class="control-label"><?php echo $this->form->getLabel('eventname'); ?></div>
 					<div class="controls"><?php echo $this->form->getInput('eventname'); ?></div>
-				</div>														
+				</div>
+				<div class="hidden-group">
+					<div class="controls"><?php echo $this->form->getInput('venueid'); ?></div>
+				</div>
 			<?php echo JHtml::_('bootstrap.endPanel'); ?>
 						
 			<input type="hidden" name="task" value="" />

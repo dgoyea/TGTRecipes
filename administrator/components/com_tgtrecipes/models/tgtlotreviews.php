@@ -38,6 +38,7 @@ class TgtrecipesModelTgtlotreviews extends JModelList
 				'id', 'a.id',
 				'lotname', 'a.lotname',
 				'venueid', 'a.venueid',
+				'venuename', 'c.venuename',
 				'eventtype', 'a.eventtype',
 				'ordering', 'a.ordering'
 			);
@@ -65,12 +66,15 @@ class TgtrecipesModelTgtlotreviews extends JModelList
 		$query->select(
 			$this->getState(
 				'list.select',
-				'a.id, a.lotname',
-				'a.venueid, a.eventtype',
+				'a.id, a.lotname,' .
+				'a.venueid, a.eventtype,' .
 				'a.ordering'
 			)
 		);
 		$query->from($db->quoteName('#__tgtlotreviews').' AS a');
+		
+		$query->select('c.venuename AS venuename');
+		$query->join('LEFT', '#__tgtlotvenues AS c ON c.id = a.venueid');
 
 		return $query;
 	}
