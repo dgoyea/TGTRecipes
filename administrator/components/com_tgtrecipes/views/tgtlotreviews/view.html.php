@@ -9,7 +9,7 @@
 defined('_JEXEC') or die;
 
 /**
- * TgtRecipes view for com_tgtrecipes controller
+ * Tgtlotreviews view for com_tgtrecipes controller
  *
  * @package     Joomla.Administrator
  * @subpackage  com_tgtrecipes

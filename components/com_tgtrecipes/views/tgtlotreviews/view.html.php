@@ -10,19 +10,38 @@
 defined('_JEXEC') or die;
 
 /**
- * Tgtlotreviews view
+ * Tgtlotreviews view for com_tgtrecipes controller
  *
  * @package     Joomla.Site
  * @subpackage  com_tgtrecipes
- * @since       1.2
+ * @since       1.3.2
  */
  
-class TgtrecipesViewTgtrecipes extends JViewLegacy
+class TgtrecipesViewTgtLotreviews extends JViewLegacy
 {
+
+	/**
+	 * Array of data retrieved from model
+	 *
+	 * @var    array
+	 * @since  1.3.2
+	 */	
 	protected $items;
-	
+
+	/**
+	 * Field to store the state of the item (published, archived, etc.)
+	 *
+	 * @var    string
+	 * @since  1.3
+	 */	
 	protected $state;
 	
+	/**
+	 * Pagination field
+	 *
+	 * @var    ?
+	 * @since  1.3.2
+	 */
 	protected $pagination;	
 
 	public function display($tpl = null)
@@ -50,7 +69,7 @@ class TgtrecipesViewTgtrecipes extends JViewLegacy
 	 *
 	 * @param
 	 * @return
-	 * @since   1.0
+	 * @since   1.3.2
 	 */
 	protected function getSortFields()
 	{
