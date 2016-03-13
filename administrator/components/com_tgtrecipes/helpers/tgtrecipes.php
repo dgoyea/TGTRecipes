@@ -55,4 +55,40 @@ class TgtrecipesHelper
 
 		return $result;
 	}
+	
+	 /**
+     * Add Submenu function
+     * Adds link to the categories submenu to create categories for TGT Recipes
+     *
+     * @package Joomla.administrator
+     * @subpackage com_tgtrecipes
+     *
+     * @param   $vName = name of component
+     * @return  n/a
+     * @since   1.3.3
+     */
+	public static function addSubmenu($vName = 'tgtrecipes')
+	{
+		JHtmlSidebar::addEntry(
+			JText::_('COM_TGTRECIPES_SUBMENU_RECIPES'),
+			'index.php?option=com_tgtrecipes&view=tgtrecipes',
+			$vName == 'tgtrecipes'
+		);
+		JHtmlSidebar::addEntry(
+			JText::_('COM_TGTRECIPES_SUBMENU_CATEGORIES'),
+			'index.php?option=com_categories&extension=com_tgtrecipes',
+			$vName == 'categories'
+		);
+		if ($vName == 'categories')
+		{
+			JToolbarHelper::title(
+				JText::sprintf('COM_CATEGORIES_CATEGORIES_TITLE', JText::_('com_tgtrecipes')),
+				'tgtrecipes-categories');
+		}
+		JHtmlSidebar::addEntry(
+			JText::_('COM_TGTRECIPES_SUBMENU_PREVIEW'),
+			'index.php?option=com_tgtrecipes&view=preview',
+			$vName == 'preview'
+		);
+	}
 }

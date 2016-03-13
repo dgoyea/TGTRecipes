@@ -40,6 +40,8 @@ class TgtRecipesViewTgtrecipes extends JViewLegacy
 	public function display($tpl = null)
 	{
 		$this->items		= $this->get('Items');
+		
+		TgtrecipesHelper::addSubmenu('tgtrecipes');
 
 		if (count($errors = $this->get('Errors')))
 		{
@@ -48,6 +50,7 @@ class TgtRecipesViewTgtrecipes extends JViewLegacy
 		}
 
 		$this->addToolbar();
+		$this->sidebar = JHtmlSidebar::render();
 		parent::display($tpl);
 	}
 
